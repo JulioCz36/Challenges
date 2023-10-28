@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Sora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Sora&display=swap");
+
+body {
+  background: #181719;
+
+  color: white;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+button {
+  background-color: #181719;
+  color: white;
+  border: none;
+  width: 38px;
+  height: 38px;
+}
+/*--------------------------------------------------------------------------*/
+/*Header*/
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 200px;
+  margin-top: 46px;
+}
+.menu-button {
+  display: none;
+  width: 58px;
+  height: 58px;
+}
+.navegacion {
+  display: flex;
+  position: relative; /* Permitir la posición relativa para el pseudo-elemento */
+}
+.navegacion .links {
+  display: flex;
+  gap: 2ren;
+}
+
+li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-right: 50px;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+nav a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease ; /* Ajusta la duración y la transición aquí */
+}
+nav a.selected {
+  font-weight: bold; /* El texto estará en negritas cuando está seleccionado */
+}
+
+nav a.selected::after {
+  width: 100%;
+  transition: width 0.3s ease;
+   /* Ajusta la duración y la transición aquí */
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  -ms-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+}
+
+#interior {
+  width: 103px;
+  height: 20px;
+  border: 1px solid white;
+  padding: 3px;
+  text-align: center;
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+/*--------------------------------------------------------------------------*/
+/*Modern Interior Description y img*/
+.modernInterior {
+  display: flex;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+/*Title*/
+#titleAndDes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 410px;
+  justify-content: center;
+  margin-right: 50px;
+}
+#title {
+  font-family: "Lora", serif;
+}
+.title1 {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+/*description*/
+#descrition {
+  font-family: "Montserrat", sans-serif;
+}
+.descrition1 {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+/*IMG*/
+#img_description {
+  width: 737px;
+  height: 555px;
+  position: relative;
+}
+
+/*LINK*/
+.linkR a:hover {
+  color: green;
+}
+.linkR a strong {
+  font-size: 18px;
+}
+a,
+input {
+  cursor: pointer;
+}
+
+.linkR a {
+  display: flex;
+  align-items: center;
+}
+.linkR a span {
+  margin-left: 10px;
+}
+
+/*--------------------------------------------------------------------------*/
+#container {
+  display: flex;
+}
+
+/*--------------------------------------------------------------------------*/
+/*Card perfil description*/
+.cardPerfil {
+  width: 380px;
+  height: 150px;
+  background: #181719;
+  position: absolute;
+  top: 92%;
+  left: 60%;
+  z-index: 1;
+  padding: 30px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+#axu {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#axu > #descrition {
+  margin-left: 20px;
+}
+#photoP {
+  width: 50px;
+  height: 50px;
+}
+.imagen-circular img {
+  border-radius: 50%;
+}
+#name {
+  font-size: 14px;
+}
+#pro {
+  font-size: 12px;
+  color: #828282;
+}
+.cardPerfil #title {
+  font-size: 24px;
+}
+
+/*--------------------------------------------------------------------------*/
+/*Footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30%;
+}
+
+/*--------------------------------------*/
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #181719;
+  transition: height 0.2s ease;
+  -webkit-transition: height 0.2s ease;
+  -moz-transition: height 0.2s ease;
+  -ms-transition: height 0.2s ease;
+  -o-transition: height 0.2s ease;
+}
+.dropdown_menu.open {
+  height: 700px;
+}
+.dropdown_menu li {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Home{
+  margin-top: 220px;
+}
+
+.dropdown_menu ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.3s ease; /* Ajusta la duración y la transición aquí */
+}
+
+/* Ajusta el estilo de la línea en el menú desplegable cuando el enlace está seleccionado */
+.dropdown_menu ul li a.selected::after {
+  width: 100%; /* Ancho completo cuando está seleccionado */
+  background-color: white; /* Color de fondo blanco cuando está seleccionado */
+}
+
+/* ... Tu CSS posterior ... */
+
+
+/*--------------------------------------------------------------------------*/
+/*Pantalla movil*/
+@media (max-width: 375px) {
+  /*Header*/
+  header {
+    margin-bottom: 50px;
+    margin-top: 10px;
+  }
+  .menu-button {
+    display: block;
+    z-index: 3;
+  }
+  .material-symbols-outlined.cerrado {
+    display: none;
+  }
+  #close {
+    display: none;
+  }
+  .navegacion .links {
+    display: none;
+  }
+  .modernInterior {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+  #interior {
+    margin-left: 5px;
+  }
+
+  /*--------------------------------------------------------------------------*/
+  /*Modern Interior Description y img*/
+  .modernInterior {
+    display: flex;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /*Title*/
+  #titleAndDes{
+    margin-right: 0;
+    width: 300px;
+  }
+  .title1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  /*description*/
+
+  .descrition1 {
+    font-size: 14px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 85px;
+  }
+  /*LINK*/
+
+  .linkR {
+    margin-bottom: 30px;
+  }
+  .linkR a strong {
+    font-size: 14px;
+  }
+
+  /*IMG*/
+  #img_description {
+    width: 351px;
+    height: 264.32px;
+    position: relative;
+  }
+
+  /*Card perfil description*/
+  .cardPerfil {
+    width: 270px;
+    height: 115px;
+    top: 77%;
+    left: 14%;
+    z-index: 1;
+    padding: 15px;
+  }
+  #axu {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  #axu > #descrition {
+    margin-left: 10px;
+  }
+  #photoP {
+    width: 36.59px;
+    height: 36.59px;
+  }
+  #name {
+    font-size: 12px;
+  }
+  #pro {
+    font-size: 10px;
+  }
+  .cardPerfil #title {
+    font-size: 18px;
+  }
+
+
+  /*--------------------------------------------------------------------------*/
+/*Footer*/
+  footer{
+    margin-top: 50%;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern interior</title>
+    <link rel="icon" href="/Img/devchallenges.png" type="image/ico" />
+    <link rel="stylesheet" type="text/css" href="Styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div id="interior"><span>This interior</span></div>
+
+      <nav id="main-nav" class="navegacion">
+        <ul class="links">
+          <li>
+            <a
+              href="#home"
+              onclick="selectSection('home')"
+              onclick="OpenSeccion('home')"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#collection" onclick="selectSection('collection')"
+              >Collection</a
+            >
+          </li>
+          <li><a href="#about" onclick="selectSection('about')">About</a></li>
+          <li>
+            <a href="#contact" onclick="selectSection('contact')">Contact</a>
+          </li>
+        </ul>
+        <span class="underline"></span>
+        <button class="menu-button" onclick="toggleNav()">
+          <span class="material-symbols-outlined abierto"> menu </span>
+          <span class="material-symbols-outlined cerrado"> close </span>
+        </button>
+      </nav>
+      <div class="dropdown_menu">
+        <ul>
+          <li id="Home">
+            <a href="#home" onclick="selectSection('home')" class="selected">Home</a>
+          </li>
+          <li id="Collection">
+            <a href="#collection" onclick="selectSection('collection')">Collection</a>
+          </li>
+          <li id="About">
+            <a href="#about" onclick="selectSection('about')">About</a>
+          </li>
+          <li id="Contact">
+            <a href="#contact" onclick="selectSection('contact')">Contact</a>
+          </li>
+        </ul>
+        <span class="underline"></span>
+      </div>
+    </header>
+
+    <section class="modernInterior" id="main" class="section">
+      <article id="titleAndDes">
+        <span id="title" class="title1"><strong>Modern interior</strong></span>
+        <span id="descrition" class="descrition1">
+          A full-Service residential & <br />
+          commercial interior design and staging company offering <br />
+          professional organizing & <br />
+          eco-services.
+        </span>
+        <div class="linkR" id="descrition">
+          <a>
+            <strong>Read More </strong>
+            <span class="material-symbols-outlined"> arrow_right_alt </span>
+          </a>
+        </div>
+      </article>
+      <div id="container">
+        <div id="img_description">
+          <img src="/Img/photo1.png" alt="foto descriptiva" />
+        </div>
+        <article class="cardPerfil">
+          <div id="axu">
+            <div id="photoP" class="imagen-circular">
+              <img src="/Img/photo2.png" alt="" />
+            </div>
+            <div id="descrition">
+              <span id="name">Aliza Webber</span>
+              <br />
+              <span id="pro">interior designer</span>
+            </div>
+          </div>
+          <span id="title">
+            <strong>Designed in 2020 by <br />Aliza Webber</strong>
+          </span>
+        </article>
+      </div>
+    </section>
+
+    <footer><span>created by JulioCz36 - devChallenges.io</span></footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

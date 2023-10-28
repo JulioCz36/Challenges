@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Playfair+Display:ital@0;1&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding-left: 150px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-size: 24px;
+  color: #333333;
+  font-weight: bold;
+}
+li {
+  display: flex;
+  align-items: flex-start;
+}
+li p {
+  margin-top: 0;
+  margin-left: 10px;
+  width: 530px;
+}
+
+/*---------------------------*/
+/*Header*/
+header {
+  margin-bottom: 40px;
+}
+h1 {
+  width: 587px;
+  height: 64px;
+  font-size: 48px;
+}
+h1,
+.title {
+  font-family: "Playfair Display", serif;
+}
+.descrition p {
+  width: 592px;
+  color: #4f4f4f;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/*---------------------------*/
+
+.imagen-container {
+  width: 969px; /* Ancho del div */
+}
+.imagen-container img {
+  max-width: 100%;
+  height: auto; /* Alto de la imagen al 100% del contenedor */
+}
+
+/*-------------------------------------------------------*/
+/*Ingredients*/
+.ingredientes {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.sub-title {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-style: italic;
+}
+.checkbox-button {
+  width: 21px;
+  height: 21px;
+  border: 1px solid #ccc; /* Borde del checkbox */
+  border-radius: 3px; /* Borde redondeado */
+  outline: none;
+  cursor: pointer;
+  float: left;
+}
+p span {
+  font-style: italic;
+}
+
+/*----------------------------*/
+/*Car guia*/
+.card-guia {
+  margin-left: 185px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 216px;
+  height: 367px;
+  border-radius: 12px;
+
+  box-shadow: 0px 0px 20px 0px #0000001a;
+}
+.contenido {
+  width: 122px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#dining {
+  color: #f2994a;
+}
+#clock {
+  color: #4f4f4f;
+}
+.contenido div {
+  margin-left: 10px;
+}
+.times {
+  margin-top: 0px;
+}
+.times .contenido{
+  margin-top: 35px;
+}
+.tile-card {
+  color: #bdbdbd;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.p-card {
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*-------------------------------------------------------------*/
+/*Instructions*/
+.nuber {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  text-align: center;
+  background: #f2994a;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.Instructions > article > ul > li {
+  margin-top: 30px;
+}
+
+/*-------------------------------------------------------------*/
+/*footer*/
+footer {
+  margin-top: 50px;
+  color: #bdbdbd;
+  font-size: 16px;
+}
+
+/*-------------------------------------------------------------*/
+.by {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #828282;
+  margin-top: 100px;
+}
+
+/*--------------------------------------------------------------------------*/
+/*Pantalla movil*/
+@media (max-width: 375px) {
+  body {
+    padding-left: 0;
+  }
+  .title {
+    font-size: 18px;
+  }
+  li p {
+    margin-left: 10px;
+    width: 320px;
+    font-size: 14px;
+  }
+
+  /*---------------------------*/
+  /*Header*/
+  header {
+    margin-bottom: 5px;
+  }
+  h1 {
+    width: 323px;
+    height: 29px;
+    font-size: 24px;
+  }
+  .descrition p {
+    width: 320px;
+    font-size: 12px;
+  }
+  /*---------------------------*/
+
+  .imagen-container {
+    width: 358px;
+  }
+
+  /*-------------------------------------------------------*/
+  /*Ingredients*/
+  .ingredientes {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  .sub-title {
+    font-size: 16px;
+  }
+  /*----------------------------*/
+  /*Car guia*/
+  .card-guia {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: 0px 0px 0px 0px #0000001a;
+  }
+  .contenido {
+    width: 111px;
+  }
+  .tile-card {
+    font-size: 8px;
+  }
+  .p-card {
+    font-size: 10px;
+  }
+  .times {
+    margin-top: 25px;
+    display: flex;
+  }
+  .times .contenido{
+    margin-top: 0px;
+  }
+  /*-------------------------------------------------------------*/
+  /*footer*/
+  footer {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+}
