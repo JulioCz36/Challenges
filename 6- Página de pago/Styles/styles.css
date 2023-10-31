@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/*generales*/
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+h1{
+  color: #4E5150;
+  font-size: 36px;
+}
+h3{
+  color: #333333;
+  font-size: 18px;
+}
+.img-edit div span{
+  color: #4E5150;
+  font-size: 16px;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header{
+  margin-left: 175px;
+}
+
+/*---------------------------------------------------------------------*/
+/*formularios*/
+.info{
+  color: #4F4F4F;
+  font-size: 12px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 465px;
+  color: #828282;
+  background: none;
+  border: solid 1px #828282;
+  border-radius: 12px;
+}
+div article form{
+  max-width: 217px;
+}
+.cuntry-code{
+  display: flex;
+  justify-content: space-between;
+  width: 465px;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.material-symbols-outlined {
+  font-size: 24px;
+  color: #706c6c;
+  margin-right: 10px; /* Espacio entre el ícono y el campo de entrada */
+  margin-left: 10px; 
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%; /* Asegura que el campo de entrada ocupe el ancho completo */
+}
+#country{
+  display: flex;
+  flex-direction: row;
+}
+.contry{
+  width: 115px;
+}
+input {
+  color: #828282;
+  background: none;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+/* Oculta las flechas de incremento en los input de tipo número */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input:focus {
+  outline: none;
+}
+label {
+  font-size: 18px;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  cursor: pointer;
+  color: #706c6c;
+  transition: transform .2s;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  transform: translateY(-24px);
+  background: white;
+  font-size: 14px;
+  padding: 5px;
+}
+input:not(:focus) + label {
+  color: #706c6c;
+}
+.contact-shipping{
+  margin-top: 50px;
+}
+/*---------------------------*/
+/*contry*/
+a {
+	text-decoration: none;
+}
+.select {
+  background: #D7D7D7;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .2s ease all;
+  position: relative;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+a div p{
+  color: #333333;
+}
+.opciones {
+  max-height: 0;
+  overflow: hidden;
+  z-index: 100;
+  width: 100%;
+  display: block;
+  transition: max-height 0.3s ease-in-out; /* Agrega una transición a la propiedad max-height */
+}
+
+.opciones.active {
+  max-height: 400px; /* Ajusta la altura máxima al valor deseado */
+}
+
+.contenido-opcion {
+  transition: .2s ease all;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.opciones .contenido-opcion:hover {
+  background: rgb(26, 115, 232);
+}
+
+/*---------------------------*/
+/*Checkbox*/
+.myCheckbox {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 20px;
+}
+.myCheckbox .info {
+  margin: 0;
+}
+.myCheckbox input{
+  width: 21px;
+  height: 21px;
+}
+
+
+/*---------------------------*/
+/*continue*/
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 465px;
+}
+.continue{
+  margin-top: 30px;
+  display: flex;
+  height: 54px;
+  width: 166px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #F2994A;
+  color: #FFFFFF;
+}
+ 
+.continue > svg {
+  font-size: 16px;
+  transition: all 0.4s ease-in;
+ 
+ }
+
+ .continue:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+ }
+
+/*---------------------------------------------------------------------*/
+/*Shop*/
+.card-shop{
+  width: 383px;
+  height: 535px;
+  background:#F2F2F2 ;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-shop section{
+  margin-bottom:10px;
+}
+.compra{
+  margin-top: 35px;
+  width: 316.97px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.imagen{
+  width: 134.21px;
+  height: 136.27px;
+}
+.imagen img {
+  border-radius: 13px;
+  max-width: 100%;
+  height: auto; /* Alto de la imagen al 100% del contenedor */
+}
+.img-edit div p{
+  font-size: 16px;
+  color: #F2994A;
+}
+del{
+  font-size: 12px;
+  color: #4E5150;
+  margin-left: 10px;
+}
+.card-cant{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 134.25px;
+  height: 52px;
+  border: solid 1px #828282;
+  border-radius: 12px;
+  margin-top: 28px;
+}
+.btn-edit{
+  background: #D6D6D6;
+  border-radius: 5px;
+  border: none;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.img-edit{
+  display: flex;
+  gap: 30px;
+}
+.resultado{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 327.06px;
+  height: 50px;
+  border-top: 1px solid #BDBDBD; 
+}
+.resultado h4{
+  font-size: 18px;
+  color: #333333;
+}
+.resultado p{
+  font-size: 14px;
+  color: #333333;
+}
+
+
+footer{
+  display: flex;
+  justify-content: center;
+  color: #BDBDBD;
+  font-size: 14px;
+  margin-top: 150px;
+
+}
+
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 775px) {
+  main{
+    flex-direction: column-reverse;
+  }
+  .img-edit div span{
+    font-size: 12px;
+  }
+  h1{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 14px;
+  }
+  header{
+    margin-left: 0px;
+  }
+
+  /*---------------------------------------------------------------------*/
+ /*Shop*/
+  .card-shop{
+    width: 350px;
+    height: 489px;
+    
+  }
+  .compra{
+    margin-top: 30px;
+    width: 289.92px;
+    gap: 25px;
+  }
+  .imagen{
+    width: 122.75px;
+    height: 124.64px;
+  }
+  
+  .img-edit div p{
+    font-size: 14px;
+  }
+  del{
+    font-size: 10px;
+  }
+  .card-cant{
+    width: 122.8px;
+    height: 49.86px;
+    margin-top: 20px;
+  }
+  .btn-edit{
+    width: 19.39px;
+    height: 19.39px;
+  }
+  .resultado{
+    width: 299.15px;
+    height: 48px;
+  }
+  .resultado h4{
+    font-size: 14px;
+  }
+
+  /*---------------------------------------------------------------------*/
+/*formularios*/
+.informacion{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-shipping{
+  width:349.25px ;
+}
+.info{
+  font-size: 10px;
+}
+form {
+  max-width: 349.25px;
+}
+div article form{
+  max-width: 164.76px;
+}
+.cuntry-code{
+  width: 349.25px;
+}
+
+.material-symbols-outlined {
+  font-size: 15.02px;
+}
+.contry{
+  width: 65px;
+}
+input {
+  padding: 14px;
+  font-size: 12px;
+}
+
+label {
+  font-size: 12px;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  transform: translateY(-20px);
+  font-size: 12px;
+
+}
+
+/*---------------------------*/
+/*Checkbox*/
+.myCheckbox input{
+  width: 16px;
+  height: 16px;
+}
+
+/*---------------------------*/
+/*continue*/
+.button{
+  width: 349.25px;
+}
+  
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Modificar estilos para pantallas medianas */
+}
