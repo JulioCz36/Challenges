@@ -14,7 +14,7 @@
   <body>
     <header>
       <h2>Edie</h2>
-      <nav>
+      <nav class="nav-1">
         <ul>
           <li>
             <h3><a href="#Home" >Home</a></h3>
@@ -33,9 +33,46 @@
           </li>
         </ul>
       </nav>
+      <nav class="nav-2">
+        <div class="nav__container">
+          <a href="#menu-2" class="nav__menu">
+            <img src="./Img/iconos/menu.svg" class="nav__icon">
+          </a>
+          <a href="#" class="nav__menu nav__icon--second">
+            <img src="./Img/iconos/menu.svg" class="nav__icon">
+          </a>
+          <ul class="dropdown" id="menu-2">
+            <li class="dropdown__list">
+              <a href="#Home" class="dropdown__link">
+                <span class="dropdown__span">Home</span>
+              </a>
+            </li>
+            <li class="dropdown__list">
+              <a href="#Services" class="dropdown__link">
+                <span class="dropdown__span">Services</span>
+              </a>
+            </li>
+            <li class="dropdown__list">
+              <a href="#Our-Works" class="dropdown__link">
+                <span class="dropdown__span">Our Works</span>
+              </a>
+            </li>
+            <li class="dropdown__list">
+              <a href="#Clients" class="dropdown__link">
+                <span class="dropdown__span">Clients</span>
+              </a>
+            </li>
+            <li class="dropdown__list">
+              <a href="#" class="dropdown__link">
+                <span class="dropdown__span">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
-      <section id="Home">
+      <section id="Home" class="home">
         <article id="uno">
           <a href=""><p>Unhappy with your website?</p></a>
           <h1>We create beautiful and fast web services</h1>
@@ -60,41 +97,67 @@
       </section>
       <section id="Services">
         <h2>We offer high demand services</h2>
-        <service>
-          <article>
-            <span class="material-symbols-outlined">
-              edit
-            </span>
+        <div class="boxs">
+          <article class="box-service">
+            <div class="edit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 36 36">
+                <g clip-path="url(#a)">
+                  <path d="M4.5 26.19v4.56c0 .42.33.75.75.75h4.56c.195 0 .39-.075.525-.225l16.38-16.365-5.625-5.625L4.725 25.65a.736.736 0 0 0-.225.54Zm26.565-15.63a1.494 1.494 0 0 0 0-2.115l-3.51-3.51a1.494 1.494 0 0 0-2.115 0L22.695 7.68l5.625 5.625 2.745-2.745Z"/>
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path d="M0 0h36v36H0z"/>
+                  </clipPath>
+                </defs>
+              </svg>       
+            </div>          
             <h3>UI/UX Design</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
-            <button>
+            <button class="boton-service">
               Get started
             </button>
           </article>
-          <article>
-            <span class="material-symbols-outlined">
-              code
-            </span>
+          <article class="box-service">
+            <div class="code">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 36 36">
+                <g clip-path="url(#a)">
+                  <path d="M13.05 23.85 7.2 18l5.85-5.85a1.476 1.476 0 0 0 0-2.1 1.476 1.476 0 0 0-2.1 0l-6.885 6.885a1.494 1.494 0 0 0 0 2.115l6.885 6.9a1.476 1.476 0 0 0 2.1 0 1.476 1.476 0 0 0 0-2.1Zm9.9 0L28.8 18l-5.85-5.85a1.476 1.476 0 0 1 0-2.1 1.476 1.476 0 0 1 2.1 0l6.885 6.885c.585.585.585 1.53 0 2.115l-6.885 6.9a1.476 1.476 0 0 1-2.1 0 1.476 1.476 0 0 1 0-2.1Z"/>
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path d="M0 0h36v36H0z"/>
+                  </clipPath>
+                </defs>
+              </svg>                     
+            </div>
             <h3>Front End</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
-            <button>
+            <button class="boton-service">
               Get started
             </button>
           </article>
-          <article>
-            <span class="material-symbols-outlined">
-              data_table
-            </span>
+          <article class="box-service">
+            <div class="storage">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 36 36">
+                <g clip-path="url(#a)">
+                  <path d="M6 30h24c1.65 0 3-1.35 3-3s-1.35-3-3-3H6c-1.65 0-3 1.35-3 3s1.35 3 3 3Zm0-4.5h3v3H6v-3ZM3 9c0 1.65 1.35 3 3 3h24c1.65 0 3-1.35 3-3s-1.35-3-3-3H6C4.35 6 3 7.35 3 9Zm6 1.5H6v-3h3v3ZM6 21h24c1.65 0 3-1.35 3-3s-1.35-3-3-3H6c-1.65 0-3 1.35-3 3s1.35 3 3 3Zm0-4.5h3v3H6v-3Z"/>
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path d="M0 0h36v36H0z"/>
+                  </clipPath>
+                </defs>
+              </svg>                    
+            </div>
             <h3>Back End</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
-            <button>
+            <button class="boton-service">
               Get started
             </button>
           </article>
-        </service>
+        </div>
       </section>
       <section id="Our-Works">
-        <Our-Works>
           <h2>Good design means good business</h2>
         <div class="container">
           <div class="photo1">
@@ -124,8 +187,6 @@
             </a>
           </div>
         </div>
-        
-        </Our-Works>
       </section>
       <section id="team">
         <article>
@@ -140,6 +201,7 @@
         </div>
       </section>
       <section id="Clients">
+        <div class="client-container">
           <h2>“Fast and outstanding resutls. Edie understands their customer’s needs. They have a young and talented team.”</h2>
           <article>
             <div id="person4"></div>
@@ -148,18 +210,17 @@
               <p>The Decorate Gatsby</p>
             </span>
           </article>
+        </div>
       </section>
     </main>
-
     <footer id="Contact">
-      <section>
-        <article class="nav-2">
-          <ul>
+      <section id="menu-3">
+          <ul class="ul">
             <li id="Home">
              <p><a href="#Home" >Home</a></p>
             </li>
             <li id="Collection">
-              <p><a href="#Services" >Services </a></p>
+              <p><a href="#Services" >Services</a></p>
             </li>
             <li id="About">
               <p><a href="#Our-Works" >Our Works</a></p>
@@ -171,13 +232,12 @@
               <p><a href="#Contact">Contact</a></p>
             </li>
           </ul>
-        </article>
         <article>
           <h2>Edie</h2>
           <div>
-            <img src="/Redes/instagram.svg" alt="">
-            <img src="/Redes/linkedin.svg" alt="">
-            <img src="/Redes/twitter.svg" alt="">
+            <img src="/Redes/instagram.svg" alt="instagram" class="redes">
+            <img src="/Redes/linkedin.svg" alt="linkedin" class="redes">
+            <img src="/Redes/twitter.svg" alt="twitter" class="redes">
           </div>
         </article>
         <article class="fotmulario">
@@ -193,7 +253,7 @@
           </form>
         </article>
       </section>
-      <span>created by JulioCz36 - devChallenges.io</span>
+      <span>created by <a href="https://github.com/JulioCz36"> JulioCz36 </a>- devChallenges.io</span>
     </footer>
 
     <script src="/Javascript.js"></script>

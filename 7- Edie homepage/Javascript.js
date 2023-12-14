@@ -1,5 +1,5 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+document.querySelectorAll('.nav-1 a[href^="#"],#menu-2 a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
       e.preventDefault();
   
       const targetId = this.getAttribute('href').substring(1); // Obtiene el ID del destino
@@ -30,4 +30,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
   });
+
+  
+
   
