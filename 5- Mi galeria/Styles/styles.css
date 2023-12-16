@@ -138,10 +138,9 @@ footer {
   color: #b9bdcf;
   font-size: 14px;
 }
-
 /*--------------------------------------------------------------------------*/
-/*Pantalla movil*/
-@media (max-width: 375px) {
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 769px) {
   /*header*/
 
   .imgPerfil {

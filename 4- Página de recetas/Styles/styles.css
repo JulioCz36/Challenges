@@ -167,7 +167,7 @@ footer {
 
 /*--------------------------------------------------------------------------*/
 /*Pantalla movil*/
-@media (max-width: 375px) {
+@media screen and (max-width: 769px) {
   body {
     padding-left: 0;
   }
