@@ -1,24 +1,60 @@
+let activeLink = null; // Variable para almacenar el enlace activo actualmente
+
 function selectSection(sectionId) {
-  const navLinks = document.querySelectorAll(".navegacion .links li a");
-  navLinks.forEach((link) => link.classList.remove("selected"));
+  const selectedLink = document.querySelector(`.navegacion .links li a[href="#${sectionId}"], .dropdown_menu ul li a[href="#${sectionId}"]`);
+  const underline = document.querySelector(".underline");
 
-  // Marcar el enlace correspondiente al hacer clic en el menú principal
-  const selectedLink = document.querySelector(`.navegacion .links li#${sectionId} a`);
-  selectedLink.classList.add("selected");
+  const textWidth = selectedLink.offsetWidth;
+  const textLeft = selectedLink.offsetLeft;
+  underline.style.width = `${textWidth}px`;
+  underline.style.transform = `translateX(${textLeft}px)`; // Mover la línea al inicio del texto
 
-  // Marcar el enlace correspondiente al hacer clic en el menú desplegable
-  const dropdownLinks = document.querySelectorAll(".dropdown_menu ul li a");
-  dropdownLinks.forEach((link) => link.classList.remove("selected"));
+  // Ocultar la línea subrayada si se selecciona otro enlace
+  if (activeLink && activeLink !== selectedLink) {
+    activeLink.classList.remove("selected");
+    underline.classList.remove("active");
+  }
 
-  const selectedDropdownLink = document.querySelector(`.dropdown_menu ul li#${sectionId} a`);
-  selectedDropdownLink.classList.add("selected");
+  // Alternar el estado seleccionado del enlace actual
+  if (selectedLink.classList.contains("selected")) {
+    selectedLink.classList.remove("selected");
+    underline.classList.remove("active");
+    activeLink = null;
+  } else {
+    selectedLink.classList.add("selected");
+    underline.classList.add("active");
+    activeLink = selectedLink;
+  }
+}
 
-  // Marcar la sección correspondiente
-  const sections = document.querySelectorAll("section");
-  sections.forEach((section) => section.classList.remove("selected-section"));
 
-  const selectedSection = document.getElementById(sectionId);
-  selectedSection.classList.add("selected-section");
+let active = null; // Variable para almacenar el enlace activo actualmente
+
+function select(sectionId) {
+  const selectedLink = document.querySelector(`.dropdown_menu ul li a[href="#${sectionId}"]`);
+  const underline = document.querySelector(".underline");
+
+  const textWidth = selectedLink.offsetWidth;
+  const textLeft = selectedLink.offsetLeft;
+  underline.style.width = `${textWidth}px`;
+  underline.style.transform = `translateX(${textLeft}px)`; // Mover la línea al inicio del texto
+
+  // Ocultar la línea subrayada si se selecciona otro enlace
+  if (active && active !== selectedLink) {
+    active.classList.remove("selected");
+    underline.classList.remove("active");
+  }
+
+  // Alternar el estado seleccionado del enlace actual
+  if (selectedLink.classList.contains("selected")) {
+    selectedLink.classList.remove("selected");
+    underline.classList.remove("active");
+    active = null;
+  } else {
+    selectedLink.classList.add("selected");
+    underline.classList.add("active");
+    active = selectedLink;
+  }
 }
 
 function toggleNav() {

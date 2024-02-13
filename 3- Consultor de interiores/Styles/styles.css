@@ -61,18 +61,23 @@ nav a::after {
   background-color: white;
   transition: width 0.3s ease ; /* Ajusta la duración y la transición aquí */
 }
-nav a.selected {
-  font-weight: bold; /* El texto estará en negritas cuando está seleccionado */
+
+
+.underline {
+  z-index: 30;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease, opacity 0.3s ease;
 }
 
-nav a.selected::after {
-  width: 100%;
-  transition: width 0.3s ease;
-   /* Ajusta la duración y la transición aquí */
-  -webkit-transition: width 0.3s ease;
-  -moz-transition: width 0.3s ease;
-  -ms-transition: width 0.3s ease;
-  -o-transition: width 0.3s ease;
+.underline.active {
+  display: block;
+  width: auto;
+  opacity: 1;
 }
 
 #interior {
@@ -125,13 +130,6 @@ li {
   margin-bottom: 50px;
 }
 
-/*IMG*/
-#img_description {
-  width: 737px;
-  height: 555px;
-  position: relative;
-}
-
 /*LINK*/
 .linkR a:hover {
   color: green;
@@ -157,15 +155,22 @@ input {
   display: flex;
 }
 
+/*IMG*/
+#img_description {
+  width: 737px;
+  height: 555px;
+  position: absolute;
+}
+
 /*--------------------------------------------------------------------------*/
 /*Card perfil description*/
 .cardPerfil {
   width: 380px;
   height: 150px;
   background: #181719;
-  position: absolute;
-  top: 92%;
-  left: 60%;
+  position: relative;
+  top: 140%;
+  left: 58%;
   z-index: 1;
   padding: 30px;
   box-shadow: 0px 4px 4px 0px #00000040;
@@ -202,7 +207,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30%;
+  margin-top: 40%;
 }
 
 /*--------------------------------------*/
@@ -253,12 +258,10 @@ footer {
   background-color: white; /* Color de fondo blanco cuando está seleccionado */
 }
 
-/* ... Tu CSS posterior ... */
-
 
 /*--------------------------------------------------------------------------*/
 /*Pantalla movil*/
-@media (max-width: 375px) {
+@media screen and (max-width: 769px)  {
   /*Header*/
   header {
     margin-bottom: 50px;
@@ -293,6 +296,7 @@ footer {
   /*Modern Interior Description y img*/
   .modernInterior {
     display: flex;
+    align-items: center;
     margin-right: 5px;
     margin-left: 5px;
   }
@@ -323,20 +327,26 @@ footer {
   .linkR a strong {
     font-size: 14px;
   }
+  #container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
   /*IMG*/
   #img_description {
     width: 351px;
     height: 264.32px;
-    position: relative;
+    position: absolute;
   }
 
   /*Card perfil description*/
   .cardPerfil {
+    position: relative;
     width: 270px;
     height: 115px;
-    top: 77%;
-    left: 14%;
+    top: 200px;
+    left: 0%;
     z-index: 1;
     padding: 15px;
   }
@@ -366,6 +376,6 @@ footer {
   /*--------------------------------------------------------------------------*/
 /*Footer*/
   footer{
-    margin-top: 50%;
+    margin-top: 120%;
   }
 }
