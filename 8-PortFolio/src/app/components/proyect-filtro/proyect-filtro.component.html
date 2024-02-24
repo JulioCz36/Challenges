@@ -1,0 +1,36 @@
+<section class="filtro">
+    <h4>
+        {{title}}
+    </h4>
+  <article>
+    <button
+      [ngClass]="{ active: selectedButton === 'Angular' }"
+      (click)="cambiarColor('Angular')"
+    >
+      Angular
+    </button>
+    <button
+      [ngClass]="{ active: selectedButton === 'Reponsive' }"
+      (click)="cambiarColor('Reponsive')"
+    >
+    Reponsive
+    </button>
+  </article>
+</section>
+<section class="proyects" [@fadeInOut]>
+  <app-proyect *ngFor="let data of visibleProyects" [proyectData]="data"></app-proyect>
+</section>
+
+<article class="botonesFlechas">
+  <button (click)="moverColumnasAtras()" class="flechas">
+    <span class="material-symbols-outlined">
+      chevron_left
+    </span>
+  </button>
+  <button (click)="moverColumnas()" class="flechas">
+    <span class="material-symbols-outlined">
+    chevron_right
+    </span>
+  </button>
+</article> 
+

@@ -1,0 +1,102 @@
+:root {
+  --skills-bar: 0%;
+}
+.body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 100px;
+}
+
+section {
+  width: 389px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 32px 0px #0000001f;
+  padding: 20px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+h3 {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
+}
+.skills__tech {
+  margin: 0;
+}
+
+.skills {
+  padding: 1em 0;
+}
+.skills__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+.skills__bar,
+.skills__bar::after {
+  position: relative;
+  width: 222px;
+  height: 9px;
+  background-color: #c4c4c4;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.skills__bar::after {
+  content: "";
+  position: absolute;
+  left: -222px;
+  background-color: #2f80ed;
+  transition: color 0.1s, background-color 0.2s ease-in-out;
+  -webkit-transition: color 0.1s, background-color 0.2s ease-in-out;
+  -moz-transition: color 0.1s, background-color 0.2s ease-in-out;
+  -ms-transition: color 0.1s, background-color 0.2s ease-in-out;
+  -o-transition: color 0.1s, background-color 0.2s ease-in-out;
+  animation: skills-bar-fill 2s ease-in-out forwards;
+  -webkit-animation: skills-bar-fill 2s ease-in-out forwards;
+}
+.skills__bar--10::after {
+  --skills-bar: 10%;
+}
+.skills__bar--20::after {
+  --skills-bar: 20%;
+}
+.skills__bar--30::after {
+  --skills-bar: 30%;
+}
+.skills__bar--40::after {
+  --skills-bar: 40%;
+}
+.skills__bar--50::after {
+  --skills-bar: 50%;
+}
+.skills__bar--60::after {
+  --skills-bar: 60%;
+}
+.skills__bar--70::after {
+  --skills-bar: 70%;
+}
+@keyframes skills-bar-fill {
+  to {
+    transform: translateX(var(--skills-bar));
+    -webkit-transform: translateX(var(--skills-bar));
+    -moz-transform: translateX(var(--skills-bar));
+    -ms-transform: translateX(var(--skills-bar));
+    -o-transform: translateX(var(--skills-bar));
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px ;
+  }
+  section {
+    width: 359px;  
+  }
+}

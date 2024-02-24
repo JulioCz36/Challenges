@@ -1,17 +1,15 @@
 <section>
-    <img src="../../../assets/image/img/recipeBlog.png" alt="">
-    <p class="etiqueta">#HTML #CSS #responsive</p>
-    <h3>Recipe Blog</h3>
-    <p>In this project, I work with HTML and CSS to create a responsive page. This page is similiar with instagram profile page. The design is from devchallenge.io</p>
+    <img src="{{proyectData.linkImagen}}" alt="">
+    <p class="etiqueta">{{proyectData.etiqueta}}</p>
+    <h3>{{proyectData.title}}</h3>
+    <p>{{proyectData.description}}</p>
 
 <article>
-    <a href="https://recipe-page4.netlify.app/" target="_blank">
+    <a href="{{proyectData.linkDemo}}" target="_blank">
       <button [ngClass]="{ 'active': selectedButton === 'Demo' }" (click)="cambiarColor('Demo')">Demo</button>
     </a>
-    <a href="https://github.com/JulioCz36/Challenges/tree/main/4-%20P%C3%A1gina%20de%20recetas" target="_blank">
+    <a href="{{proyectData.linkCode}}" target="_blank">
         <button [ngClass]="{ 'active': selectedButton === 'Code' }" (click)="cambiarColor('Code')">Code</button>
     </a>
 </article>
-  
-   
 </section>

@@ -1,58 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-section{
-    width: 395px;
-    height: 588px;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
-    box-shadow: 0px 4px 32px 0px #0000001F;
-    padding: 20px;
-    margin: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+section {
+  width: 328.49px;
+  height: 568px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 0px 4px 32px 0px #0000001f;
+  padding: 20px;
+  margin: 17px;
 }
-img{
-    width: 351px;
-    height: 261px;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
 }
-.etiqueta{
-    color: #4F4F4F;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 20px;
+p{
+  font-family: Montserrat;
+font-size: 16px;
+font-weight: 500;
+color: #828282;
 }
-button{
-    width: 135px;
-    height:46px;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
-    margin-top: 25px;
-    margin-left: 10px;
-    border: 1px solid;
-    color: #4F4F4F;
-    cursor: pointer;
+
+img {
+  width: 292px;
+  height: 217px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.etiqueta {
+  color: #4f4f4f;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+button {
+  width: 135px;
+  height: 46px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  margin-top: 15px;
+  margin-left: 7px;
+  border: 1px solid;
+  color: #4f4f4f;
+  cursor: pointer;
 }
 button:hover {
-    border-color: #2F80ED;
-    color: #2F80ED;
+  border-color: #2f80ed;
+  color: #2f80ed;
 }
 button.active {
-    background: #2F80ED;
-    border: none;
-    color: white;
+  background: #2f80ed;
+  border: none;
+  color: white;
 }
 button a {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: inherit; /* Mantiene el color del texto del botón */
-  }
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: inherit; /* Mantiene el color del texto del botón */
+}

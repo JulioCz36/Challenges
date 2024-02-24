@@ -1,0 +1,57 @@
+import { ProyectModel } from "src/app/models/proyect.model";
+
+
+export const PROYECTS : ProyectModel[]= [{
+    "id":1,
+    "etiqueta": "#HTML #CSS #responsive",
+    "title":"Recipe Blog",
+    "description": "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
+    "linkDemo":"https://recipe-page4.netlify.app/",
+    "linkCode":"https://github.com/JulioCz36/Challenges/tree/main/4-%20P%C3%A1gina%20de%20recetas",
+    "linkImagen":"assets/image/img/recipeBlog.png",
+  },
+  {
+    "id":2,
+    "etiqueta": "#HTML #CSS #responsive",
+    "title":"My Gallery",
+    "description": "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with instagram profile page. The design is from devchallenge.io",
+    "linkDemo":"https://my-gallery-1w.netlify.app/",
+    "linkCode":"https://github.com/JulioCz36/Challenges/tree/main/5-%20Mi%20galeria",
+    "linkImagen":"assets/image/img/myGallery.png",
+  },
+  {
+    "id":3,
+    "etiqueta": "#HTML #CSS #responsive",
+    "title":"Checkout",
+    "description": "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
+    "linkDemo":"https://pagina-de-pago.netlify.app/",
+    "linkCode":"https://github.com/JulioCz36/Challenges/tree/main/6-%20P%C3%A1gina%20de%20pago",
+    "linkImagen":"assets/image/img/Checkout.png",
+  },
+  {
+    "id":4,
+    "etiqueta": "#HTML #CSS #responsive",
+    "title":"Edie Homepage",
+    "description": "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
+    "linkDemo":"https://pagina-de-inicio-de-edie.netlify.app/",
+    "linkCode":"https://github.com/JulioCz36/Challenges/tree/main/7-%20Edie%20homepage",
+    "linkImagen":"assets/image/img/EdieHompage.webp",
+  },
+  {
+    "id":5,
+    "etiqueta": "#HTML #CSS #responsive",
+    "title":"Interior Consultant",
+    "description": "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
+    "linkDemo":"https://interior-consulta-1.netlify.app/",
+    "linkCode":"https://github.com/JulioCz36/Challenges/tree/main/3-%20Consultor%20de%20interiores",
+    "linkImagen":"assets/image/img/ModernInterior.webp",
+  },
+  {
+    "id":6,
+    "etiqueta": "#HTML #CSS #responsive",
+    "title":"404 Not Found",
+    "description": "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
+    "linkDemo":"https://404-not-found-1-2.netlify.app/",
+    "linkCode":"https://github.com/JulioCz36/Challenges/tree/main/1-%20404%20No%20encontrado",
+    "linkImagen":"assets/image/img/404.webp",
+  }];

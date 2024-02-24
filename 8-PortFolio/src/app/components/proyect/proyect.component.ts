@@ -1,5 +1,5 @@
-// En tu componente de Angular
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-proyect',
@@ -11,5 +11,7 @@ export class ProyectComponent {
   cambiarColor(boton: string) {
     this.selectedButton = boton;
   }
+
+  @Input () proyectData : any;
   
 }
