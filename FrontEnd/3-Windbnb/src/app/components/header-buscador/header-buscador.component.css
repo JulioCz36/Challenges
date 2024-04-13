@@ -1,0 +1,51 @@
+span {
+  color: #eb5757;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+article {
+  display: flex;
+  width: 297px;
+  height: 55px;
+  border-radius: 16px;
+  box-shadow: 0px 1px 6px 0px #0000001a;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+article > div {
+  position: relative;
+  padding: 0 10px; /* Ajusta el espacio interno */
+}
+
+article > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: 0;
+  width: 1px;
+  background-color: #ccc; /* Color de la línea */
+}
+
+.search {
+  border: none; /* Quita el borde */
+  background: none; /* Quita el fondo */
+  cursor: pointer;
+  color: inherit; /* Usa el color del texto del contenedor padre */
+}
+.huespedes {
+  color: #bdbdbd;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
