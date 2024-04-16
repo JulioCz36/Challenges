@@ -7,6 +7,8 @@ import { CardHabitacionesComponent } from './components/card-habitaciones/card-h
 import { CardsDepartamentosComponent } from './components/cards-departamentos/cards-departamentos.component';
 import { HeaderBuscadorComponent } from './components/header-buscador/header-buscador.component';
 import { CardBuscarComponent } from './components/card-buscar/card-buscar.component';
+import { ButtonBuscarComponent } from './components/button-buscar/button-buscar.component';
+import { FiltroLocalidadComponent } from './components/filtro-localidad/filtro-localidad.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { CardBuscarComponent } from './components/card-buscar/card-buscar.compon
     CardsDepartamentosComponent,
     HeaderBuscadorComponent,
     CardBuscarComponent,
+    ButtonBuscarComponent,
+    FiltroLocalidadComponent,
   ],
   imports: [
     BrowserModule,

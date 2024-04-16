@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectedLocationService } from '../../servis/selected-location.service';
 
 @Component({
   selector: 'app-header-buscador',
@@ -9,10 +10,7 @@ export class HeaderBuscadorComponent implements OnInit {
   isMenuActive = false;
   originalScrollPosition = 0;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  selectedLocation: string | null = null; // Corrección del nombre de la variable
 
   toggleMenu() {
     if (!this.isMenuActive) {
@@ -28,4 +26,14 @@ export class HeaderBuscadorComponent implements OnInit {
     // Vuelve a la posición original después de cerrar el menú
     window.scrollTo({ top: this.originalScrollPosition, behavior: 'smooth' });
   }
+
+  constructor(private selectedLocationService: SelectedLocationService) { }
+
+  ngOnInit(): void {
+    this.selectedLocationService.selectedLocation$.subscribe(location => {
+      this.selectedLocation = location;
+    });
+  }
+
+  
 }
