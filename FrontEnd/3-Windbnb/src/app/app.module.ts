@@ -9,6 +9,7 @@ import { HeaderBuscadorComponent } from './components/header-buscador/header-bus
 import { CardBuscarComponent } from './components/card-buscar/card-buscar.component';
 import { ButtonBuscarComponent } from './components/button-buscar/button-buscar.component';
 import { FiltroLocalidadComponent } from './components/filtro-localidad/filtro-localidad.component';
+import { FiltroPersonasComponent } from './components/filtro-personas/filtro-personas.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FiltroLocalidadComponent } from './components/filtro-localidad/filtro-l
     CardBuscarComponent,
     ButtonBuscarComponent,
     FiltroLocalidadComponent,
+    FiltroPersonasComponent,
   ],
   imports: [
     BrowserModule,

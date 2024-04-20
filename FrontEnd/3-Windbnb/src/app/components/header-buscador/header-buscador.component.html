@@ -5,10 +5,10 @@
     <img src="../../../assets/accesorios/logo.png" alt="">
     <article>
         <div>
-            <p>{{ selectedLocation || 'Helsinki, Finland' }}</p>
+            <p>{{ selectedLocation || 'Add location' }}</p>
         </div>
         <div>
-            <p class="huespedes">Add guests</p>
+            <p class="huespedes">{{ totalGuests > 0 ? totalGuests + ' guests' : 'Add guests' }}</p>
         </div>
         <button class="search" (click)="toggleMenu()">
             <span class="material-symbols-outlined">
