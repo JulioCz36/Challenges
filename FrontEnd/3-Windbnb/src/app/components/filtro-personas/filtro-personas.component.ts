@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectedPersonasService } from '../../servis/selected-personas.service';
+import { FiltrosService } from '../../servis/filtros.service';
 
 @Component({
   selector: 'app-filtro-personas',
@@ -14,7 +14,7 @@ export class FiltroPersonasComponent implements OnInit {
   contadorNinos: number = 0;
   totalGuests: number = 0;
 
-  constructor(private selectedPersonasService: SelectedPersonasService) { }
+  constructor(private selectedPersonasService: FiltrosService) { }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -42,6 +42,7 @@ export class FiltroPersonasComponent implements OnInit {
     this.totalGuests = this.contadorAdultos + this.contadorNinos;
     this.selectedPersonasService.setTotalGuests(this.totalGuests); // Actualiza el total de huéspedes en el servicio
   }
+  
 
   ngOnInit(): void {
   }

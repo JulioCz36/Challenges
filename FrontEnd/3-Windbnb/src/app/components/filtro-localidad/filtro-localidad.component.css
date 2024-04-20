@@ -47,16 +47,24 @@ div {
   transition: 0.2s;
 }
 li {
-  font-size: 14px;
-  font-weight: 400;
   margin-top: 25px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .menu-open {
   display: block;
   opacity: 1;
 }
 .selected {
+  font-size: 14px;
+  font-weight: 400;
+}
+p {
+  margin: 0;
+  margin-left: 5px;
+  padding: 0;
+  color: #4f4f4f;
   font-size: 14px;
   font-weight: 400;
 }

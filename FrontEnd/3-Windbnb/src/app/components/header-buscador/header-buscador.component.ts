@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectedLocationService } from '../../servis/selected-location.service';
-import { SelectedPersonasService } from '../../servis/selected-personas.service';
+import { FiltrosService } from '../../servis/filtros.service';
+
 
 @Component({
   selector: 'app-header-buscador',
@@ -14,10 +14,7 @@ export class HeaderBuscadorComponent implements OnInit {
   selectedLocation: string | null = null;
   totalGuests: number = 0; // Variable para almacenar el total de huéspedes
 
-  constructor(
-    private selectedLocationService: SelectedLocationService,
-    private selectedPersonasService: SelectedPersonasService // Inyecta el servicio
-  ) { }
+  constructor(private filtros: FiltrosService,) { }
 
   toggleMenu() {
     if (!this.isMenuActive) {
@@ -35,11 +32,11 @@ export class HeaderBuscadorComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedLocationService.selectedLocation$.subscribe(location => {
+    this.filtros.selectedLocation$.subscribe(location => {
       this.selectedLocation = location;
     });
 
-    this.selectedPersonasService.totalGuests$.subscribe(totalGuests => {
+    this.filtros.totalGuests$.subscribe(totalGuests => {
       this.totalGuests = totalGuests; // Actualiza el total de huéspedes
     });
   }

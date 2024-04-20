@@ -5,7 +5,8 @@
     <img src="../../../assets/accesorios/logo.png" alt="">
     <article>
         <div>
-            <p>{{ selectedLocation || 'Add location' }}</p>
+            <p *ngIf="selectedLocation !== null">{{ selectedLocation + ', Finland' || 'Add location' }}</p>
+            <p *ngIf="selectedLocation === null">Add location</p>
         </div>
         <div>
             <p class="huespedes">{{ totalGuests > 0 ? totalGuests + ' guests' : 'Add guests' }}</p>

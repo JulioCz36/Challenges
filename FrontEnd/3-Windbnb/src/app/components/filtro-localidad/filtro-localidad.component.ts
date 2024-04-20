@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectedLocationService } from '../../servis/selected-location.service';
+import { FiltrosService } from '../../servis/filtros.service';
 
 @Component({
   selector: 'app-filtro-localidad',
@@ -11,7 +11,7 @@ export class FiltroLocalidadComponent implements OnInit {
   isMenuOpen = false;
   selectedLocation: string | null = null;
 
-  constructor(private selectedLocationService: SelectedLocationService) { }
+  constructor(private selectedLocationService: FiltrosService) { }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
