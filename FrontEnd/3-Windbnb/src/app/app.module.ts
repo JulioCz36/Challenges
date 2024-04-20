@@ -10,6 +10,7 @@ import { CardBuscarComponent } from './components/card-buscar/card-buscar.compon
 import { ButtonBuscarComponent } from './components/button-buscar/button-buscar.component';
 import { FiltroLocalidadComponent } from './components/filtro-localidad/filtro-localidad.component';
 import { FiltroPersonasComponent } from './components/filtro-personas/filtro-personas.component';
+import { CardBuscarMovilComponent } from './components/card-buscar-movil/card-buscar-movil.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FiltroPersonasComponent } from './components/filtro-personas/filtro-per
     ButtonBuscarComponent,
     FiltroLocalidadComponent,
     FiltroPersonasComponent,
+    CardBuscarMovilComponent,
   ],
   imports: [
     BrowserModule,

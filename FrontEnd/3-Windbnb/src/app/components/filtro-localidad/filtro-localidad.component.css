@@ -68,3 +68,13 @@ p {
   font-size: 14px;
   font-weight: 400;
 }
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 769px) {
+  .dropdown {
+    width: 351px;
+  }
+  .menu {
+    margin-top: 80px;
+  }
+}
