@@ -1,7 +1,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-<section *ngIf="!isMenuActive">
+<section *ngIf="!isMenuActive && !isMenuActiveMovil">
     <img src="../../../assets/accesorios/logo.png" alt="">
     <article>
         <div>
@@ -19,3 +19,4 @@
     </article>
 </section>
 <app-card-buscar *ngIf="isMenuActive" (cerrar)="closeMenu()"></app-card-buscar>
+<app-card-buscar-movil *ngIf="isMenuActiveMovil" (cerrar)="closeMenu()"></app-card-buscar-movil>

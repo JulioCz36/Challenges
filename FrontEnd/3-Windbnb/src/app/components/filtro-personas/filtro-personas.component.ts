@@ -16,8 +16,19 @@ export class FiltroPersonasComponent implements OnInit {
 
   constructor(private selectedPersonasService: FiltrosService) { }
 
+  ngOnInit(): void {
+    this.selectedPersonasService.personasFiltroAbiertoChange.subscribe(estado => {
+      this.isMenuOpen = estado;
+      if (estado) {
+        // Si se abre el filtro de personas, cerrar el filtro de localidad
+        this.selectedPersonasService.toggleLocalidadFiltro(false);
+      }
+    });
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.selectedPersonasService.togglePersonasFiltro(true);
   }
   
   incrementCounter(type: number) {
@@ -43,8 +54,4 @@ export class FiltroPersonasComponent implements OnInit {
     this.selectedPersonasService.setTotalGuests(this.totalGuests); // Actualiza el total de huéspedes en el servicio
   }
   
-
-  ngOnInit(): void {
-  }
-
 }

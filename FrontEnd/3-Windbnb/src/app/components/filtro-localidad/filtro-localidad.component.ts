@@ -13,8 +13,19 @@ export class FiltroLocalidadComponent implements OnInit {
 
   constructor(private selectedLocationService: FiltrosService) { }
 
+  ngOnInit(): void {
+    this.selectedLocationService.localidadFiltroAbiertoChange.subscribe(estado => {
+      this.isMenuOpen = estado;
+      if (estado) {
+        // Si se abre el filtro de localidad, cerrar el filtro de personas
+        this.selectedLocationService.togglePersonasFiltro(false);
+      }
+    });
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.selectedLocationService.toggleLocalidadFiltro(true);
   }
 
   selectLocation(location: string) {
@@ -22,8 +33,4 @@ export class FiltroLocalidadComponent implements OnInit {
     this.selectedLocationService.setSelectedLocation(location);
     this.isMenuOpen = false; // Cerrar el menú después de seleccionar la ubicación
   }
-
-  ngOnInit(): void {
-  }
-
 }

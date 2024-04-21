@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button-buscar.component.css']
 })
 export class ButtonBuscarComponent implements OnInit {
+
   ngOnInit() {
   }
+
 }
 

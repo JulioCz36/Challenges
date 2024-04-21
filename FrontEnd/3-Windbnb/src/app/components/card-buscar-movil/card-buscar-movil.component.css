@@ -1,11 +1,15 @@
 section {
   height: 632px;
-  border: 1px solid;
+  width: 100%;
+  top:0%; 
   padding: 15px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-    justify-content: space-between;
+  justify-content: space-between;
+  position: fixed;
+  background: #FFFFFF;
+  box-shadow: 0 630px 20px rgba(0, 0, 0, 0.3);
 }
 p {
   margin: 0;
