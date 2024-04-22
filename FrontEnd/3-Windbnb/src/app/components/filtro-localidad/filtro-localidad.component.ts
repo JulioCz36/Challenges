@@ -30,7 +30,7 @@ export class FiltroLocalidadComponent implements OnInit {
 
   selectLocation(location: string) {
     this.selectedLocation = location;
-    this.selectedLocationService.setSelectedLocation(location);
+    this.selectedLocationService.guardarSelectedLocation(location);
     this.isMenuOpen = false; // Cerrar el menú después de seleccionar la ubicación
   }
 }
