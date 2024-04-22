@@ -51,7 +51,7 @@ export class FiltroPersonasComponent implements OnInit {
 
   updateTotalGuests() {
     this.totalGuests = this.contadorAdultos + this.contadorNinos;
-    this.selectedPersonasService.setTotalGuests(this.totalGuests); // Actualiza el total de huéspedes en el servicio
+    this.selectedPersonasService.guardarTotalGuests(this.totalGuests); // Actualiza el total de huéspedes en el servicio
   }
   
 }

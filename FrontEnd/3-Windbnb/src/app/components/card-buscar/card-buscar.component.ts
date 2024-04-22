@@ -30,9 +30,12 @@ export class CardBuscarComponent {
   filtros(): void {
     if(this.filtro.activo){
       this.filtro.filtroLocation$.pipe(take(1)).subscribe(location => {
-        if (location !== null) {
-          this.filtro.setSelectedLocation(location);
-        }
+        this.filtro.filtroGuests$.pipe(take(1)).subscribe(guest => {
+          if (location !== null) {
+            this.filtro.setSelectedLocation(location);
+            this.filtro.setTotalGuests(guest);
+          }
+        });
       });
     }
     this.filtro.activarBusqueda(false);
